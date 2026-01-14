@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skeleton Crew</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dust: "#ffffff", //should be pure
+            slateblue: "#59656f",
+            grape: "#9c528b",
+            shadow: "#1d1e2c",
+            pure: "#f0f6f6", // new  secondairy color 989788 c5baaf fffae2
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-dust text-shadow">
+  <!-- Top bar -->
+  <div class="bg-shadow text-pure">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
+      <p class="opacity-90">Free shipping over €50 • 30-day returns</p>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-dust/90 hover:underline" href="contact.html">Support</a>
+        <a class="hover:text-dust/90 hover:underline" href="careers.html">Careers</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 border-b border-slateblue/20 bg-pure/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex items-center gap-2 font-semibold text-shadow">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-grape text-pure">
+          SC
+        </span>
+        <span>Skeleton Crew</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden items-center gap-6 md:flex">
+        <a class="text-sm font-medium text-shadow hover:text-grape" href="./products/products.html">Products</a>
+        <a class="text-sm font-medium text-shadow hover:text-grape" href="./about/about.html">About</a>
+        <a class="text-sm font-medium text-shadow hover:text-grape" href="./contact/contact.html">Contact</a>
+        <a class="text-sm font-medium text-shadow hover:text-grape" href="./careers/careers.html">Jobs</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="hidden md:block">
+          <label class="relative block">
+            <span class="sr-only">Search</span>
+            <input
+              class="w-64 rounded-xl border border-slateblue/25 bg-dust/40 px-4 py-2 text-sm outline-none placeholder:text-slateblue focus:border-grape"
+              placeholder="Search products..."
+            />
+          </label>
+        </div>
+
+        <a href="cart.html" class="relative rounded-xl border border-slateblue/25 bg-pure px-3 py-2 text-sm hover:bg-dust/40">
+          Cart
+          <span class="ml-2 rounded-full bg-shadow px-2 py-0.5 text-xs text-pure">3</span>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuBtn"
+          class="rounded-xl border border-slateblue/25 bg-pure px-3 py-2 text-sm hover:bg-dust/40 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          Menu
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden border-t border-slateblue/20 bg-pure md:hidden">
+      <div class="mx-auto max-w-7xl px-4 py-4">
+        <div class="flex flex-col gap-3">
+          <input class="rounded-xl border border-slateblue/25 bg-dust/40 px-4 py-2 text-sm placeholder:text-slateblue focus:border-grape" placeholder="Search..." />
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-dust/40 hover:text-grape" href="products.html">Products</a>
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-dust/40 hover:text-grape" href="about.html">About</a>
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-dust/40 hover:text-grape" href="contact.html">Contact</a>
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-dust/40 hover:text-grape" href="careers.html">Jobs</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <main class="mx-auto max-w-7xl px-4 py-10">
+    <!-- Hero -->
+    <section class="grid items-center gap-8 md:grid-cols-2">
+      <div class="space-y-5">
+        <p class="inline-flex w-fit rounded-full bg-shadow px-3 py-1 text-xs font-medium text-pure">
+          New season • Limited drops
+        </p>
+
+        <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">
+          Ironic skeleton tees for the bold.
+        </h1>
+
+        <p class="text-slateblue">
+          Skeleton Crew is clean, punchy, and a bit weird (in a good way).
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="products.html" class="rounded-xl bg-grape px-5 py-3 text-sm font-medium text-pure hover:bg-shadow">
+            Shop products
+          </a>
+          <a href="about.html" class="rounded-xl border border-slateblue/25 bg-pure px-5 py-3 text-sm font-medium hover:bg-dust/40">
+            Learn more
+          </a>
+        </div>
+
+        <div class="flex gap-6 text-sm text-slateblue">
+          <div><span class="font-semibold text-shadow">4.8★</span> avg rating</div>
+          <div><span class="font-semibold text-shadow">2–3d</span> delivery</div>
+          <div><span class="font-semibold text-shadow">30d</span> returns</div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-3xl bg-gradient-to-br from-dust to-slateblue/20 shadow-sm"></div>
+
+        <div class="absolute bottom-4 left-4 rounded-2xl bg-pure/90 p-4 shadow-sm backdrop-blur border border-slateblue/15">
+          <p class="text-xs text-slateblue">Featured</p>
+          <p class="font-semibold text-shadow">Starter Bundle</p>
+          <p class="text-sm text-slateblue">€79 • best value</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category tiles -->
+    <section class="mt-14">
+      <div class="flex items-end justify-between">
+        <h2 class="text-xl font-semibold">Browse categories</h2>
+        <a class="text-sm text-slateblue hover:text-grape" href="products.html">View all →</a>
+      </div>
+
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        <a class="group rounded-3xl border border-slateblue/20 bg-pure p-6 hover:shadow-sm" href="products.html">
+          <div class="h-32 rounded-2xl bg-dust"></div>
+          <p class="mt-4 font-semibold group-hover:text-grape group-hover:underline">Tees</p>
+          <p class="text-sm text-slateblue">Ironic. Soft. Slightly undead.</p>
+        </a>
+
+        <a class="group rounded-3xl border border-slateblue/20 bg-pure p-6 hover:shadow-sm" href="products.html">
+          <div class="h-32 rounded-2xl bg-dust"></div>
+          <p class="mt-4 font-semibold group-hover:text-grape group-hover:underline">Hoodies</p>
+          <p class="text-sm text-slateblue">For cold nights and bony vibes.</p>
+        </a>
+
+        <a class="group rounded-3xl border border-slateblue/20 bg-pure p-6 hover:shadow-sm" href="products.html">
+          <div class="h-32 rounded-2xl bg-dust"></div>
+          <p class="mt-4 font-semibold group-hover:text-grape group-hover:underline">Accessories</p>
+          <p class="text-sm text-slateblue">Pins, patches, and tiny skull energy.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured products preview -->
+    <section class="mt-14">
+      <div class="flex items-end justify-between">
+        <h2 class="text-xl font-semibold">Featured picks</h2>
+        <a class="text-sm text-slateblue hover:text-grape" href="products.html">Shop all →</a>
+      </div>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Card -->
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square rounded-2xl bg-dust"></div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">“Dead Inside” Tee</p>
+              <p class="text-sm text-slateblue">Cotton • Black</p>
+            </div>
+            <p class="font-semibold">€39</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">
+            Add to cart
+          </button>
+        </article>
+
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square rounded-2xl bg-dust"></div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">“Bone Appétit” Tee</p>
+              <p class="text-sm text-slateblue">Cotton • White</p>
+            </div>
+            <p class="font-semibold">€24</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">
+            Add to cart
+          </button>
+        </article>
+
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square rounded-2xl bg-dust"></div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">“Spooky Season” Tee</p>
+              <p class="text-sm text-slateblue">Cotton • Slate</p>
+            </div>
+            <p class="font-semibold">€29</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">
+            Add to cart
+          </button>
+        </article>
+
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square rounded-2xl bg-dust"></div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">“Grave Rave” Tee</p>
+              <p class="text-sm text-slateblue">Cotton • Purple</p>
+            </div>
+            <p class="font-semibold">€19</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">
+            Add to cart
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Trust/mission strip -->
+    <section class="mt-14 rounded-3xl border border-slateblue/20 bg-pure p-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div>
+          <p class="text-sm text-slateblue">Mission</p>
+          <p class="mt-2 font-semibold">Dress like you’ve seen the afterlife.</p>
+          <p class="mt-1 text-sm text-slateblue">Funny designs, comfy fits, and solid quality.</p>
+        </div>
+        <div>
+          <p class="text-sm text-slateblue">Values</p>
+          <ul class="mt-2 space-y-1 text-sm text-slateblue">
+            <li>• Humor, always</li>
+            <li>• Comfort matters</li>
+            <li>• Simple, clean design</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm text-slateblue">Support</p>
+          <p class="mt-2 text-sm text-slateblue">Questions? Use the contact form — we reply within 24h.</p>
+          <a class="mt-3 inline-block text-sm font-medium text-grape hover:underline" href="contact.html">Contact us →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slateblue/20 bg-pure">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-4">
+      <div class="space-y-2">
+        <div class="flex items-center gap-2 font-semibold">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-grape text-pure">SC</span>
+          <span>Skeleton Crew</span>
+        </div>
+        <p class="text-sm text-slateblue">Ironic skeleton tees. Clean UI. Spooky energy.</p>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-sm font-semibold">Shop</p>
+        <a class="block text-sm text-slateblue hover:text-grape" href="products.html">All products</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="products.html">New arrivals</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="products.html">Best sellers</a>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-sm font-semibold">Company</p>
+        <a class="block text-sm text-slateblue hover:text-grape" href="about.html">About</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="careers.html">Careers</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="contact.html">Contact</a>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-sm font-semibold">Newsletter</p>
+        <div class="flex gap-2">
+          <input class="w-full rounded-xl border border-slateblue/25 bg-dust/40 px-4 py-2 text-sm placeholder:text-slateblue focus:border-grape" placeholder="Email" />
+          <button class="rounded-xl bg-grape px-4 py-2 text-sm font-medium text-pure hover:bg-shadow">
+            Join
+          </button>
+        </div>
+        <p class="text-xs text-slateblue">Design-only — no backend needed.</p>
+      </div>
+    </div>
+
+    <div class="border-t border-slateblue/20">
+      <div class="mx-auto max-w-7xl px-4 py-4 text-xs text-slateblue">
+        © 2026 Skeleton Crew. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  </script>
+</body>
+</html>

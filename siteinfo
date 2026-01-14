@@ -1,6 +1,21 @@
 brainstrom session
 
 main colors used:  ?
-https://coolors.co/f79256-fbd1a2-7dcfb6-00b2ca-1d4e89
-site name: ?
-shop type: ?
+https://coolors.co/d7cdcc-ffffff-59656f-9c528b-1d1e2c 
+
+main color: white ffffff
+secondaire color: platinum f0f6f6
+thirde: blue slate 59656f
+fourth Grape soda 9c528b
+fiveth: Shadaw grey 1d1e2c
+
+ colors: {
+            dust: "#ffffff", //should be pure
+            slateblue: "#59656f",
+            grape: "#9c528b",
+            shadow: "#1d1e2c",
+            pure: "#f0f6f6", // new  secondairy color 989788 c5baaf fffae2
+
+
+site name: Skeleton Crew
+shop type: silly skeleton t-shirts
