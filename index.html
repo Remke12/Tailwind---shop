@@ -3,36 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShopSkeleton</title>
+  <title>Skeleton Crew</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pure: "#ffffff",
+            platinum: "#f0f6f6",
+            slateblue: "#59656f",
+            grape: "#9c528b",
+            shadow: "#1d1e2c"
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body class="min-h-screen bg-gray-50 text-gray-900">
+<body class="min-h-screen bg-pure text-shadow">
   <!-- Top bar -->
-  <div class="bg-gray-900 text-gray-100">
+  <div class="bg-shadow text-pure">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
       <p class="opacity-90">Free shipping over €50 • 30-day returns</p>
       <div class="flex items-center gap-4">
-        <a class="hover:underline" href="contact.html">Support</a>
-        <a class="hover:underline" href="careers.html">Careers</a>
+        <a class="hover:text-platinum hover:underline" href="contact/contact.html">Support</a>
+        <a class="hover:text-platinum hover:underline" href="careers/careers.html">Careers</a>
       </div>
     </div>
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-30 border-b bg-white/90 backdrop-blur">
+  <header class="sticky top-0 z-30 border-b border-slateblue/20 bg-pure/90 backdrop-blur">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
       <a href="index.html" class="flex items-center gap-2 font-semibold">
-        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gray-900 text-white">S</span>
-        <span>ShopSkeleton</span>
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-grape text-pure">SC</span>
+        <span>Skeleton Crew</span>
       </a>
 
       <!-- Desktop nav -->
       <nav class="hidden items-center gap-6 md:flex">
-        <a class="text-sm font-medium hover:text-gray-600" href="./products/products.html">Products</a>
-        <a class="text-sm font-medium hover:text-gray-600" href="./about/about.html">About</a>
-        <a class="text-sm font-medium hover:text-gray-600" href="./contact/contact.html">Contact</a>
-        <a class="text-sm font-medium hover:text-gray-600" href="./careers/careers.html">Jobs</a>
+        <a class="text-sm font-medium hover:text-grape" href="products/products.html">Products</a>
+        <a class="text-sm font-medium hover:text-grape" href="about/about.html">About</a>
+        <a class="text-sm font-medium hover:text-grape" href="contact/contact.html">Contact</a>
+        <a class="text-sm font-medium hover:text-grape" href="careers/careers.html">Jobs</a>
       </nav>
 
       <div class="flex items-center gap-3">
@@ -40,21 +56,21 @@
           <label class="relative block">
             <span class="sr-only">Search</span>
             <input
-              class="w-64 rounded-xl border border-gray-200 bg-gray-50 px-4 py-2 text-sm outline-none focus:border-gray-300"
+              class="w-64 rounded-xl border border-slateblue/25 bg-platinum px-4 py-2 text-sm outline-none placeholder:text-slateblue focus:border-grape"
               placeholder="Search products..."
             />
           </label>
         </div>
 
-        <a href="cart.html" class="relative rounded-xl border border-gray-200 px-3 py-2 text-sm hover:bg-gray-50">
+        <a href="cart/cart.html" class="relative rounded-xl border border-slateblue/25 bg-pure px-3 py-2 text-sm hover:bg-platinum">
           Cart
-          <span class="ml-2 rounded-full bg-gray-900 px-2 py-0.5 text-xs text-white">3</span>
+          <span class="ml-2 rounded-full bg-shadow px-2 py-0.5 text-xs text-pure">3</span>
         </a>
 
         <!-- Mobile menu button -->
         <button
           id="menuBtn"
-          class="rounded-xl border border-gray-200 px-3 py-2 text-sm hover:bg-gray-50 md:hidden"
+          class="rounded-xl border border-slateblue/25 bg-pure px-3 py-2 text-sm hover:bg-platinum md:hidden"
           aria-expanded="false"
           aria-controls="mobileMenu"
         >
@@ -64,218 +80,227 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden border-t bg-white md:hidden">
+    <div id="mobileMenu" class="hidden border-t border-slateblue/20 bg-pure md:hidden">
       <div class="mx-auto max-w-7xl px-4 py-4">
         <div class="flex flex-col gap-3">
-          <input class="rounded-xl border border-gray-200 bg-gray-50 px-4 py-2 text-sm" placeholder="Search..." />
-          <a class="rounded-xl px-3 py-2 text-sm hover:bg-gray-50" href="products.html">Products</a>
-          <a class="rounded-xl px-3 py-2 text-sm hover:bg-gray-50" href="about.html">About</a>
-          <a class="rounded-xl px-3 py-2 text-sm hover:bg-gray-50" href="contact.html">Contact</a>
-          <a class="rounded-xl px-3 py-2 text-sm hover:bg-gray-50" href="careers.html">Jobs</a>
+          <input class="rounded-xl border border-slateblue/25 bg-platinum px-4 py-2 text-sm placeholder:text-slateblue focus:border-grape" placeholder="Search..." />
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-platinum hover:text-grape" href="products/products.html">Products</a>
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-platinum hover:text-grape" href="about/about.html">About</a>
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-platinum hover:text-grape" href="contact/contact.html">Contact</a>
+          <a class="rounded-xl px-3 py-2 text-sm hover:bg-platinum hover:text-grape" href="careers/careers.html">Jobs</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Page content -->
   <main class="mx-auto max-w-7xl px-4 py-10">
+
     <!-- Hero -->
-<section class="grid items-center gap-8 md:grid-cols-2">
-  <div class="space-y-5">
-    <p class="inline-flex w-fit rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white">
-      New season • Limited drops
-    </p>
-    <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">
-      Design-first essentials for everyday life.
-    </h1>
-    <p class="text-gray-600">
-      A clean, modern ecommerce UI. Focused on clarity, trust, and quick browsing.
-    </p>
-    <div class="flex flex-wrap gap-3">
-      <a href="products.html" class="rounded-xl bg-gray-900 px-5 py-3 text-sm font-medium text-white hover:bg-gray-800">
-        Shop products
-      </a>
-      <a href="about.html" class="rounded-xl border border-gray-200 px-5 py-3 text-sm font-medium hover:bg-gray-50">
-        Learn more
-      </a>
-    </div>
-    <div class="flex gap-6 text-sm text-gray-600">
-      <div><span class="font-semibold text-gray-900">4.8★</span> avg rating</div>
-      <div><span class="font-semibold text-gray-900">2–3d</span> delivery</div>
-      <div><span class="font-semibold text-gray-900">30d</span> returns</div>
-    </div>
-  </div>
-
-  <div class="relative">
-    <div class="aspect-[4/3] rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 shadow-sm"></div>
-    <div class="absolute bottom-4 left-4 rounded-2xl bg-white/90 p-4 shadow-sm backdrop-blur">
-      <p class="text-xs text-gray-500">Featured</p>
-      <p class="font-semibold">Starter Bundle</p>
-      <p class="text-sm text-gray-600">€79 • best value</p>
-    </div>
-  </div>
-</section>
-
-<!-- Category tiles -->
-<section class="mt-14">
-  <div class="flex items-end justify-between">
-    <h2 class="text-xl font-semibold">Browse categories</h2>
-    <a class="text-sm text-gray-600 hover:text-gray-900" href="products.html">View all →</a>
-  </div>
-
-  <div class="mt-6 grid gap-4 md:grid-cols-3">
-    <a class="group rounded-3xl border bg-white p-6 hover:shadow-sm" href="products.html">
-      <div class="h-32 rounded-2xl bg-gray-100"></div>
-      <p class="mt-4 font-semibold group-hover:underline">Accessories</p>
-      <p class="text-sm text-gray-600">Small upgrades, big difference.</p>
-    </a>
-
-    <a class="group rounded-3xl border bg-white p-6 hover:shadow-sm" href="products.html">
-      <div class="h-32 rounded-2xl bg-gray-100"></div>
-      <p class="mt-4 font-semibold group-hover:underline">Home goods</p>
-      <p class="text-sm text-gray-600">Clean design for everyday use.</p>
-    </a>
-
-    <a class="group rounded-3xl border bg-white p-6 hover:shadow-sm" href="products.html">
-      <div class="h-32 rounded-2xl bg-gray-100"></div>
-      <p class="mt-4 font-semibold group-hover:underline">Tech</p>
-      <p class="text-sm text-gray-600">Functional, minimal, durable.</p>
-    </a>
-  </div>
-</section>
-
-<!-- Featured products preview -->
-<section class="mt-14">
-  <div class="flex items-end justify-between">
-    <h2 class="text-xl font-semibold">Featured picks</h2>
-    <a class="text-sm text-gray-600 hover:text-gray-900" href="products.html">Shop all →</a>
-  </div>
-
-  <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-    <!-- Card -->
-    <article class="rounded-3xl border bg-white p-4 hover:shadow-sm">
-      <div class="aspect-square rounded-2xl bg-gray-100"></div>
-      <div class="mt-4 flex items-start justify-between gap-3">
-        <div>
-          <p class="font-semibold">Everyday Tote</p>
-          <p class="text-sm text-gray-600">Canvas • Sand</p>
+    <section class="grid items-center gap-8 md:grid-cols-2">
+      <div class="space-y-5">
+        <p class="inline-flex w-fit rounded-full bg-shadow px-3 py-1 text-xs font-medium text-pure">
+          New drop • Skeleton humor
+        </p>
+        <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">
+          Skeleton Crew: ironic tees for living legends.
+        </h1>
+        <p class="text-slateblue">
+          A clean storefront mockup for testing layouts, typography, and color.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="products/products.html" class="rounded-xl bg-grape px-5 py-3 text-sm font-medium text-pure hover:bg-shadow">
+            Shop tees
+          </a>
+          <a href="about/about.html" class="rounded-xl border border-slateblue/25 bg-pure px-5 py-3 text-sm font-medium hover:bg-platinum">
+            Who we are
+          </a>
         </div>
-        <p class="font-semibold">€39</p>
-      </div>
-      <button class="mt-4 w-full rounded-xl bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">
-        Add to cart
-      </button>
-    </article>
-
-    <article class="rounded-3xl border bg-white p-4 hover:shadow-sm">
-      <div class="aspect-square rounded-2xl bg-gray-100"></div>
-      <div class="mt-4 flex items-start justify-between gap-3">
-        <div>
-          <p class="font-semibold">Minimal Bottle</p>
-          <p class="text-sm text-gray-600">Steel • 600ml</p>
+        <div class="flex gap-6 text-sm text-slateblue">
+          <div><span class="font-semibold text-shadow">4.8★</span> avg rating</div>
+          <div><span class="font-semibold text-shadow">2–3d</span> delivery</div>
+          <div><span class="font-semibold text-shadow">30d</span> returns</div>
         </div>
-        <p class="font-semibold">€24</p>
       </div>
-      <button class="mt-4 w-full rounded-xl bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">
-        Add to cart
-      </button>
-    </article>
 
-    <article class="rounded-3xl border bg-white p-4 hover:shadow-sm">
-      <div class="aspect-square rounded-2xl bg-gray-100"></div>
-      <div class="mt-4 flex items-start justify-between gap-3">
-        <div>
-          <p class="font-semibold">Desk Mat</p>
-          <p class="text-sm text-gray-600">Vegan leather</p>
+      <div class="relative">
+        <div class="aspect-[4/3] overflow-hidden rounded-3xl bg-platinum shadow-sm">
+          <!-- FIX: best seller is now a SHIRT image -->
+          <img src="img/shirts/Pastmybedtime.jpg" alt="Best selling Skeleton Crew tee" class="h-full w-full object-cover" />
         </div>
-        <p class="font-semibold">€29</p>
-      </div>
-      <button class="mt-4 w-full rounded-xl bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">
-        Add to cart
-      </button>
-    </article>
-
-    <article class="rounded-3xl border bg-white p-4 hover:shadow-sm">
-      <div class="aspect-square rounded-2xl bg-gray-100"></div>
-      <div class="mt-4 flex items-start justify-between gap-3">
-        <div>
-          <p class="font-semibold">Cable Kit</p>
-          <p class="text-sm text-gray-600">USB-C set</p>
+        <div class="absolute bottom-4 left-4 rounded-2xl bg-pure/90 p-4 shadow-sm backdrop-blur border border-slateblue/15">
+          <p class="text-xs text-slateblue">Featured</p>
+          <p class="font-semibold">Best Seller Tee</p>
+          <p class="text-sm text-slateblue">€29 • crowd favorite</p>
         </div>
-        <p class="font-semibold">€19</p>
       </div>
-      <button class="mt-4 w-full rounded-xl bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">
-        Add to cart
-      </button>
-    </article>
-  </div>
-</section>
+    </section>
 
-<!-- Trust/mission strip -->
-<section class="mt-14 rounded-3xl border bg-white p-8">
-  <div class="grid gap-6 md:grid-cols-3">
-    <div>
-      <p class="text-sm text-gray-500">Mission</p>
-      <p class="mt-2 font-semibold">Make good design accessible.</p>
-      <p class="mt-1 text-sm text-gray-600">Timeless products, fair pricing, honest materials.</p>
-    </div>
-    <div>
-      <p class="text-sm text-gray-500">Values</p>
-      <ul class="mt-2 space-y-1 text-sm text-gray-600">
-        <li>• Quality over quantity</li>
-        <li>• Transparent sourcing</li>
-        <li>• Thoughtful packaging</li>
-      </ul>
-    </div>
-    <div>
-      <p class="text-sm text-gray-500">Support</p>
-      <p class="mt-2 text-sm text-gray-600">Questions? Reach us via the contact form — we reply within 24h.</p>
-      <a class="mt-3 inline-block text-sm font-medium hover:underline" href="contact.html">Contact us →</a>
-    </div>
-  </div>
-</section>
+    <!-- Categories -->
+    <section class="mt-14">
+      <div class="flex items-end justify-between">
+        <h2 class="text-xl font-semibold">Browse categories</h2>
+        <a class="text-sm text-slateblue hover:text-grape" href="products/products.html">View all →</a>
+      </div>
 
-    <!-- Put page-specific sections here -->
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        <!-- FIX: Tees now uses a shirt image -->
+        <a class="group rounded-3xl border border-slateblue/20 bg-pure p-6 hover:shadow-sm" href="products/products.html">
+          <div class="h-32 overflow-hidden rounded-2xl bg-platinum">
+            <img src="img/shirts/igotthatspineinme.jpg" alt="Skeleton tee preview" class="h-full w-full object-cover opacity-90" />
+          </div>
+          <p class="mt-4 font-semibold group-hover:text-grape group-hover:underline">Tees</p>
+          <p class="text-sm text-slateblue">Ironic prints, comfy fits.</p>
+        </a>
+
+        <!-- FIX: New Drops becomes Skeleton memorabilia + uses memorabilia image -->
+        <a class="group rounded-3xl border border-slateblue/20 bg-pure p-6 hover:shadow-sm" href="products/products.html">
+          <div class="h-32 overflow-hidden rounded-2xl bg-platinum">
+            <img src="img/skeleton memorabilia/skeletonwineglass.webp" alt="Skeleton wineglass memorabilia" class="h-full w-full object-cover opacity-90" />
+          </div>
+          <p class="mt-4 font-semibold group-hover:text-grape group-hover:underline">Skeleton memorabilia</p>
+          <p class="text-sm text-slateblue">Oddities, props, and bony collectibles.</p>
+        </a>
+
+        <!-- FIX: Best sellers uses a shirt image -->
+        <a class="group rounded-3xl border border-slateblue/20 bg-pure p-6 hover:shadow-sm" href="products/products.html">
+          <div class="h-32 overflow-hidden rounded-2xl bg-platinum">
+            <img src="img/shirts/alcoholicsdontruninthefamily.jpg" alt="Best selling tees" class="h-full w-full object-cover opacity-90" />
+          </div>
+          <p class="mt-4 font-semibold group-hover:text-grape group-hover:underline">Best sellers</p>
+          <p class="text-sm text-slateblue">The classics you keep rebuying.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured picks -->
+    <section class="mt-14">
+      <div class="flex items-end justify-between">
+        <h2 class="text-xl font-semibold">Featured picks</h2>
+        <a class="text-sm text-slateblue hover:text-grape" href="products/products.html">Shop all →</a>
+      </div>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square overflow-hidden rounded-2xl bg-platinum">
+            <img src="img/shirts/Mydoctorsaidimmorbidlyabeastshiert.jpg" alt="My doctor said I'm morbidly a beast" class="h-full w-full object-cover" />
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">My doctor said I'm morbidly a beast</p>
+              <p class="text-sm text-slateblue">Unisex tee</p>
+            </div>
+            <p class="font-semibold">€29</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">Add to cart</button>
+        </article>
+
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square overflow-hidden rounded-2xl bg-platinum">
+            <img src="img/shirts/Pastmybedtime.jpg" alt="Past my bedtime" class="h-full w-full object-cover" />
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">Past my bedtime</p>
+              <p class="text-sm text-slateblue">Unisex tee</p>
+            </div>
+            <p class="font-semibold">€24</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">Add to cart</button>
+        </article>
+
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square overflow-hidden rounded-2xl bg-platinum">
+            <img src="img/shirts/PastmybedtimeSeocndVersion.jpg" alt="Past my bedtime (alt)" class="h-full w-full object-cover" />
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">Past my bedtime (alt)</p>
+              <p class="text-sm text-slateblue">Unisex tee</p>
+            </div>
+            <p class="font-semibold">€39</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">Add to cart</button>
+        </article>
+
+        <article class="rounded-3xl border border-slateblue/20 bg-pure p-4 hover:shadow-sm">
+          <div class="aspect-square overflow-hidden rounded-2xl bg-platinum">
+            <img src="img/shirts/alcoholicsdontruninthefamily.jpg" alt="Alcoholics don't run in the family" class="h-full w-full object-cover" />
+          </div>
+          <div class="mt-4 flex items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">Alcoholics don't run in the family</p>
+              <p class="text-sm text-slateblue">Unisex tee</p>
+            </div>
+            <p class="font-semibold">€19</p>
+          </div>
+          <button class="mt-4 w-full rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">Add to cart</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Trust/mission strip -->
+    <section class="mt-14 rounded-3xl border border-slateblue/20 bg-pure p-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div>
+          <p class="text-sm text-slateblue">Mission</p>
+          <p class="mt-2 font-semibold">Make good jokes wearable.</p>
+          <p class="mt-1 text-sm text-slateblue">Ironic skeleton tees, clean layouts, bold accents.</p>
+        </div>
+        <div>
+          <p class="text-sm text-slateblue">Values</p>
+          <ul class="mt-2 space-y-1 text-sm text-slateblue">
+            <li>• Simple choices</li>
+            <li>• Clear UI</li>
+            <li>• Comfort + humor</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm text-slateblue">Support</p>
+          <p class="mt-2 text-sm text-slateblue">Questions? Use the contact form — we reply within 24h.</p>
+          <a class="mt-3 inline-block text-sm font-medium text-grape hover:underline" href="contact/contact.html">Contact us →</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="border-t bg-white">
+  <footer class="border-t border-slateblue/20 bg-pure">
     <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-4">
       <div class="space-y-2">
         <div class="flex items-center gap-2 font-semibold">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gray-900 text-white">S</span>
-          <span>ShopSkeleton</span>
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-grape text-pure">SC</span>
+          <span>Skeleton Crew</span>
         </div>
-        <p class="text-sm text-gray-600">Minimal ecommerce UI skeleton built with Tailwind.</p>
+        <p class="text-sm text-slateblue">Ironic skeleton tees with clean, modern vibes.</p>
       </div>
 
       <div class="space-y-2">
         <p class="text-sm font-semibold">Shop</p>
-        <a class="block text-sm text-gray-600 hover:text-gray-900" href="products.html">All products</a>
-        <a class="block text-sm text-gray-600 hover:text-gray-900" href="products.html">New arrivals</a>
-        <a class="block text-sm text-gray-600 hover:text-gray-900" href="products.html">Best sellers</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="products/products.html">All products</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="products/products.html">New arrivals</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="products/products.html">Best sellers</a>
       </div>
 
       <div class="space-y-2">
         <p class="text-sm font-semibold">Company</p>
-        <a class="block text-sm text-gray-600 hover:text-gray-900" href="about.html">About</a>
-        <a class="block text-sm text-gray-600 hover:text-gray-900" href="careers.html">Careers</a>
-        <a class="block text-sm text-gray-600 hover:text-gray-900" href="contact.html">Contact</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="about/about.html">About</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="careers/careers.html">Careers</a>
+        <a class="block text-sm text-slateblue hover:text-grape" href="contact/contact.html">Contact</a>
       </div>
 
       <div class="space-y-2">
         <p class="text-sm font-semibold">Newsletter</p>
         <div class="flex gap-2">
-          <input class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-2 text-sm" placeholder="Email" />
-          <button class="rounded-xl bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">
-            Join
-          </button>
+          <input class="w-full rounded-xl border border-slateblue/25 bg-platinum px-4 py-2 text-sm placeholder:text-slateblue focus:border-grape" placeholder="Email" />
+          <button class="rounded-xl bg-shadow px-4 py-2 text-sm font-medium text-pure hover:bg-grape">Join</button>
         </div>
-        <p class="text-xs text-gray-500">Design-only — no backend needed.</p>
+        <p class="text-xs text-slateblue">Design-only — no backend needed.</p>
       </div>
     </div>
-    <div class="border-t">
-      <div class="mx-auto max-w-7xl px-4 py-4 text-xs text-gray-500">
-        © 2026 ShopSkeleton. All rights reserved.
+
+    <div class="border-t border-slateblue/20">
+      <div class="mx-auto max-w-7xl px-4 py-4 text-xs text-slateblue">
+        © 2026 Skeleton Crew. All rights reserved.
       </div>
     </div>
   </footer>
